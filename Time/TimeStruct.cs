@@ -30,7 +30,7 @@ namespace Time
             Seconds = isProperValue(seconds, 0 , 59);
 
             byte isProperValue(byte timeValues, byte minimum, byte maxium) =>
-               (timeValues >= minimum && timeValues <= maxium) ? timeValues : throw new ArgumentOutOfRangeException();
+               (timeValues >= minimum && timeValues <= maxium) ? timeValues : throw new ArgumentOutOfRangeException(); //Throw exception 
         }
 
         public TimeStruct(string time)
