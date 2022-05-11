@@ -1,5 +1,7 @@
 ﻿using Time;
 
+//!!!VISUAL STUDIO 2022 , .NET 6.0!!!//
+
 //Creating test object 1
 TimeStruct testtime = new TimeStruct(01, 00, 00);
 Console.WriteLine(testtime);

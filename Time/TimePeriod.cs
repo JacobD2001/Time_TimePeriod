@@ -74,12 +74,7 @@ namespace Time
         {
             return !(time1.Equals(time2));
         }
-   
-        public override int GetHashCode() //not actually needed just a warning
-        {
-            return HashCode.Combine(Seconds);
-
-        }
+    
         /************************************/
         public int CompareTo(TimePeriod otherTime)
         {
@@ -110,7 +105,5 @@ namespace Time
 
 
         /*******************************/
-
-
     }
 }
