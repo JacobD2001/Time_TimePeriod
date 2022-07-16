@@ -13,13 +13,10 @@ namespace Time_TimePeriod_Tests
         [TestCategory("Constructors")]
         public void TimeStruct_ConstructorDiffParameter()
         {
-            //Arrange(initialize object to test)
             TimeStruct testTime1 = new TimeStruct(10);
             TimeStruct testTime2 = new TimeStruct(10, 0);
             TimeStruct testTime3 = new TimeStruct(10, 00, 00);
-            //Act(act on this object)
-
-            //Assert(check if output is as expected)
+        
             Assert.AreEqual(testTime1, testTime2);
             Assert.AreEqual(testTime1, testTime2);
             Assert.AreEqual(testTime1, testTime3);

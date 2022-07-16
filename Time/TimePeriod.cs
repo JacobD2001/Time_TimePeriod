@@ -7,10 +7,8 @@ using System.Threading.Tasks;
 namespace Time
 {
     public struct TimePeriod : IEquatable<TimePeriod>, IComparable<TimePeriod>
-    {
-        //creating prop time in seconds
+    {      
         private long Seconds { get; }
-
         //creating constructors for 3,2,1 parameters
         /// <summary>
         /// calculates time to seconds 
@@ -41,14 +39,12 @@ namespace Time
         {
             return $"{Seconds / 3600:00}H {Seconds / 60 % 60:00}M {Seconds % 60:00}S";
         }
-
         //calculating timeperiod
         /// <summary>
         /// Calculates period of time between two point of time 
         /// </summary>
         /// <param name="time1"></param>
         /// <param name="time2"></param>
-
         public TimePeriod(TimeStruct time1, TimeStruct time2)
         {
             TimeStruct timePeriod1 = time1 - time2;
@@ -56,7 +52,6 @@ namespace Time
             string[] arr = tmp.Split(" ");
             Seconds = long.Parse(arr[0]) * 3600 + long.Parse(arr[1]) + long.Parse(arr[2]);
         }
-
         //overloading operators
         /// <summary>
         /// Enables addition and substraction of timeperiods
@@ -75,10 +70,6 @@ namespace Time
             long sumOfTimePeriods = timePeriod1.Seconds - timePeriod2.Seconds;
             return new TimePeriod(sumOfTimePeriods);
         }
-
-
-
-
         //implementing interfaces
         /************************************/
         public bool Equals(TimePeriod timePeriod)
@@ -94,8 +85,7 @@ namespace Time
         public static bool operator !=(TimePeriod time1, TimePeriod time2)
         {
             return !(time1.Equals(time2));
-        }
-    
+        }   
         /************************************/
         public int CompareTo(TimePeriod otherTime)
         {

@@ -56,7 +56,6 @@ namespace Time
                (timeValues >= minimum && timeValues <= maxium) ? timeValues : throw new ArgumentOutOfRangeException();
         }
      
-
         /// <summary>
         /// reads and returns format of time as __H __M __S
         /// </summary>
@@ -67,7 +66,6 @@ namespace Time
             return $"{Hours:00}{"H"} {Minutes:00}{"M"} {Seconds:00}{"S"}";
         }
         
-
         /************************************/
         public bool Equals(TimeStruct time2)
         {
@@ -83,11 +81,7 @@ namespace Time
         {
             return !(time1.Equals(time2));
         }
-
-
         /************************************/
-
-
         public int CompareTo(TimeStruct otherTime)
         {
 
@@ -131,7 +125,6 @@ namespace Time
             return timeToSeconds;
         }
       
-
         /// <summary>
         /// Enables adding two times 
         /// </summary>
@@ -161,10 +154,9 @@ namespace Time
         /// <summary>
         /// Enables substraction of two times
         /// </summary>
-        /// <param name="time1"></param>
+        /// <param name="time1"></para
         /// <param name="time2"></param>
         /// <returns></returns>
-
         public static TimeStruct operator -(TimeStruct time1, TimeStruct time2) //overload - operator
         {
             if (time1 >= time2)

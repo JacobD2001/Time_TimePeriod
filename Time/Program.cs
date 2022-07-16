@@ -1,6 +1,5 @@
 ﻿using Time;
 
-//!!!VISUAL STUDIO 2022 , .NET 6.0!!!//
 Console.WriteLine("Welcome to Time_TimePeriod! Enjoy!");
 //Creating test object 1
 TimeStruct testtime = new TimeStruct(01, 00, 00);
