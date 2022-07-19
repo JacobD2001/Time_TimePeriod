@@ -13,30 +13,30 @@ namespace Time
         private byte Seconds { get; }
 
         /// <summary>
-        /// Determines so that incorrect values can't be imput
+        /// Determines so that incorrect values can't be animput
         /// </summary>
         /// <param name="time"></param>
         /// <exception cref="ArgumentOutOfRangeException"></exception>
         /// 
-        public TimeStruct(byte hours) : this() //constructor for 1 parameters
+        public TimeStruct(byte hours) : this() 
         {
             Hours = hours;
         }
 
-        public TimeStruct(byte hours, byte minutes) : this() //constructor for 2 parameters
+        public TimeStruct(byte hours, byte minutes) : this() 
         {
             Hours = hours;
             Minutes = minutes;
         }
 
-        public TimeStruct(byte hours, byte minutes, byte seconds) //constructor for 3 parameters
+        public TimeStruct(byte hours, byte minutes, byte seconds) 
         {
             Hours = isProperValue(hours, 0, 23);
             Minutes = isProperValue(minutes, 0, 59);
             Seconds = isProperValue(seconds, 0, 59);
 
             byte isProperValue(byte timeValues, byte minimum, byte maxium) =>
-               (timeValues >= minimum && timeValues <= maxium) ? timeValues : throw new ArgumentOutOfRangeException(); //Throw exception 
+               (timeValues >= minimum && timeValues <= maxium) ? timeValues : throw new ArgumentOutOfRangeException();
         }
         /// <summary>
         /// returns time read from string format

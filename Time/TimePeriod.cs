@@ -9,7 +9,7 @@ namespace Time
     public struct TimePeriod : IEquatable<TimePeriod>, IComparable<TimePeriod>
     {      
         private long Seconds { get; }
-        //creating constructors for 3,2,1 parameters
+        //creating constructors
         /// <summary>
         /// calculates time to seconds 
         /// </summary>
